@@ -1,13 +1,16 @@
 #include<stdio.h>
 
-/*coping input to output*/
+/*count lines in input*/
 
 
-main()
-{
-	int c;
+main(){
+	int c, n1;
 
+	n1 = 0;
 	while ((c = getchar()) != EOF) {
-		putchar(c);
+		if (c == '\n') {
+			++n1;
+			printf("%d\n", n1);
+		}
 	}
 }
