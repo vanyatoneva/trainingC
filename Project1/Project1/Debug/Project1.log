@@ -1,2 +1,4 @@
 ﻿  Source.c
+C:\Users\User\Documents\GitHub\trainingC\Project1\Project1\Source.c(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Documents\GitHub\trainingC\Project1\Project1\Source.c(17): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   Project1.vcxproj -> C:\Users\User\Documents\GitHub\trainingC\Project1\Debug\Project1.exe
