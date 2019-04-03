@@ -4,18 +4,10 @@ main()
 {
 	/*prints Fahrenheit - Celsuis table for Fahrenheit = 0, 20, ..., 300*/
 
-	float fahr, celsuis;
-	int lower, upper, step;
-
-	lower = 0;
-	upper = 300;
-	step = 20;
-
-	fahr = lower;
-	while (fahr <= upper)
+	int fahr;
+	
+	for (fahr = 0; fahr <= 300; fahr = fahr + 20) 
 	{
-		celsuis = (5.0 / 9.0) * (fahr - 32.0);
-		printf("%3.0f %6.1f\n", fahr, celsuis);
-		fahr = fahr + step;
+		printf("%3d %6.1f \n", fahr, (5.0 / 9.0) * (fahr - 32.0));
 	}
 }
