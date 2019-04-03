@@ -1,17 +1,28 @@
 #include<stdio.h>
 
-/*count lines in input*/
+#define IN 1
+#define OUT 0
 
+main() {
 
-main(){
-	int c, n1;
-
+	int c, nl, nc, nw, state;
 	
+	nl = nc = nw = 0;
+	state = OUT;
 	while ((c = getchar()) != EOF) {
-		if (c == '\t' || c == '\b') {
-			c = "\\";
+		++nc;
+		if (c == '\n') 
+			++nl;
+		
+		if (c == ' ' || c == '\n' || c == '\t') 
+			state = OUT;
+		
+		else if (state == OUT) {
+			state = IN;
+			++nw;
 		}
-		putchar(c);
+		printf("%d %d %d\n", nl, nw, nc);
 	}
+	
 
 }
