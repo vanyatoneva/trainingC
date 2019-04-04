@@ -18,7 +18,7 @@ main() {
 	}
 
 
-	while ((c = getchar()) != EOF) {
+	while ((c = getchar()) != EOF && numOfWords < MAXW) {
 		if (c == ' ' || c == '\n' || c == '\t') {
 			lengths[numOfWords] = lentghOfWord;
 			++numOfWords;
