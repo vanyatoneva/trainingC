@@ -30,6 +30,9 @@ int day_of_year(int year, int month, int day) { /*set day of year from month and
 		printf("The days you entred are more than has in this month! You've entered ");
 		return day;
 	}
+	if (month < 1 || day < 1) {
+		printf("Invalid input!");
+	}
 	else {
 		for (i = 1; i < month; i++) {
 			day += daytab[leap][i];
@@ -44,6 +47,9 @@ void month_day(int year, int yearday, int* pmonth, int* pday) {
 	if (yearday > 365 + leap) {
 		printf("This year has only %d days!", (365 + leap));
 		return;
+	}
+	if (yearday <= 0) {
+		printf("Invalid input!");
 	}
 	int i;
 	for (i = 1; yearday > daytab[leap][i]; i++) {
